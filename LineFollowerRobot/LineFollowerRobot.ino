@@ -40,8 +40,8 @@ void setup()
 void loop()
 {
 
-  int rightIRSensorValue = digitalRead(IR_SENSOR_RIGHT);
-  int leftIRSensorValue = digitalRead(IR_SENSOR_LEFT);
+  int rightIRSensorValue = !digitalRead(IR_SENSOR_RIGHT);
+  int leftIRSensorValue = !digitalRead(IR_SENSOR_LEFT);
 
   //If none of the sensors detects black line, then go straight
   if (rightIRSensorValue == LOW && leftIRSensorValue == LOW)
